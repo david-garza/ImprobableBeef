@@ -45,3 +45,8 @@ function buildMetadata(sample) {
     PANEL.append("h6").text("WFREQ: "+ result.wfreq);
   });
 }
+
+// Builds charts after change
+function buildCharts(newSample) {
+
+}
