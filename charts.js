@@ -71,10 +71,6 @@ function buildCharts(sample) {
     let otuIds = objectSample.otu_ids;
     let otuLabels = objectSample.otu_labels;
     let sampleValues = objectSample.sample_values;
-
-    console.log(otuIds);
-    console.log(otuLabels);
-    console.log(sampleValues);
     
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
@@ -130,5 +126,47 @@ function buildCharts(sample) {
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble",bubbleData,bubbleLayout); 
 
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    // Deliverable 3
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    
+    // Copy the code snippet from buildmeta data
+    var metadata = data.metadata;
+    // Filter the data for the object with the desired sample number
+    var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
+    var result = resultArray[0];
+
+    
+    // 4. Create the trace for the gauge chart.
+    var gaugeData = [{
+      domain: {x: [0,1], y:[0,1]},
+      value: result.wfreq,
+      title: { text: "Belly Button Washing Frequency <br> Scrubs per Week" },
+      type: "indicator",
+      mode: "gauge+number",
+      gauge: {
+        axis: {
+          range:[0,10],
+          dtick: 2
+        },
+        bar: {
+          color: "black"
+        },
+        steps:[
+          {range: [0,2], color: "red"},
+          {range: [2,4], color: "orange"},
+          {range: [4,6], color: "yellow"},
+          {range: [6,8], color: "lightgreen"},
+          {range: [8,10], color: "green"}
+        ]
+      }
+    }];
+    
+    // 5. Create the layout for the gauge chart.
+    var gaugeLayout = { 
+    };
+
+    // 6. Use Plotly to plot the gauge data and layout.
+    Plotly.newPlot("gauge",gaugeData,gaugeLayout);
   });
 }
