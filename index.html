@@ -16,8 +16,20 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <div id="textbucket">
+          <h1 id="jumbotitle">Belly Button Biodiversity Dashboard</h1>
+          <p id="jumbosubtitle">Use the interactive charts below to explore the dataset</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="media">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">About</h5>
+            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -27,8 +39,8 @@
           <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
+        <div class="panel panel-primary" id="panel">
+          <div class="panel-heading" id="panelheading">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>

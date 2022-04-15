@@ -1,7 +1,10 @@
-.jumbotron, .well {
+#jumbotitle, #jumbosubtitle {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+.jumbotron {
     background-image: url("../images/koli-bacteria-g4b8c0c07e_1920.jpg");
     background-size: cover;
-    color: yellow;
 }
 
 body {
@@ -11,8 +14,19 @@ body {
 select, option {
     color: black;
 }
-
+/* ID uses # */
+#panelheading, .well{
+    background-color: darkgreen;
+    border-color: white;
+    color:white;
+}
+/* Class uses . */
 .panel-body {
     background-color: black;
     color: white;
+}
+
+#panel{
+    border-color: white;
+    
 }
