@@ -1,5 +1,18 @@
-.jumbotron {
+.jumbotron, .well {
     background-image: url("../images/koli-bacteria-g4b8c0c07e_1920.jpg");
-    background-size: auto;
+    background-size: cover;
+    color: yellow;
+}
+
+body {
+    background-color: black;
+}
+
+select, option {
+    color: black;
+}
+
+.panel-body {
+    background-color: black;
     color: white;
 }
