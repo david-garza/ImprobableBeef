@@ -96,7 +96,7 @@ function buildCharts(sample) {
       },
       xaxis:{
         color: "white",
-        linecolor: "white",
+        linecolor: "grey",
         gridcolor: "grey"
       },
       yaxis:{
