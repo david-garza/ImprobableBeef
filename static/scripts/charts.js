@@ -88,7 +88,20 @@ function buildCharts(sample) {
     }];
     // // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found",
+      title: {
+        text: "Top 10 Bacteria Cultures Found",
+        font: {
+          color: "white"
+        }
+      },
+      xaxis:{
+        color: "white",
+        linecolor: "white",
+        gridcolor: "grey"
+      },
+      yaxis:{
+        color: "white"
+      },
       paper_bgcolor: "black",
       plot_bgcolor: "black"
     };
