@@ -96,8 +96,7 @@ function buildCharts(sample) {
       },
       xaxis:{
         color: "white",
-        linecolor: "grey",
-        gridcolor: "grey"
+        linecolor: "white"
       },
       yaxis:{
         color: "white"
@@ -129,14 +128,22 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: "Bacteria Cultures Per Sample",
+      title: {
+        text: "Bacteria Cultures Per Sample",
+        font:{
+          color: "white"
+        }
+      },
       paper_bgcolor: "black",
       plot_bgcolor: "black",
       xaxis: {
-        title: "OTU ID"
+        title: "OTU ID",
+        color: "white"
+        
       },
       yaxis: {
         title: "Sample Values",
+        color: "white"
       }      
     };
         
@@ -158,13 +165,27 @@ function buildCharts(sample) {
     var gaugeData = [{
       domain: {x: [0,1], y:[0,1]},
       value: result.wfreq,
-      title: { text: "Belly Button Washing Frequency <br> Scrubs per Week" },
+      number:{
+        font:{
+          color: "white"
+        }
+      },
+      title: { 
+        text: "Belly Button Washing Frequency <br> Scrubs per Week",
+        font: {
+          color: "white"
+        }
+       },
       type: "indicator",
       mode: "gauge+number",
       gauge: {
         axis: {
           range:[0,10],
-          dtick: 2
+          dtick: 2,
+          tickcolor: "white",
+          tickfont:{
+            color: "white"
+          }
         },
         bar: {
           color: "black"
