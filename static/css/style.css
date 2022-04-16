@@ -30,3 +30,7 @@ select, option {
     border-color: white;
     
 }
+
+.media-body {
+    color: white;
+}
